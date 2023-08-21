@@ -1,12 +1,12 @@
-import { features } from "@/constants";
+import { services } from "@/constants";
 import styles, { layout } from "@/app/style";
 import Button from "./Button";
 import Image from "next/image";
 
-const FeaturesCard = ({ icon, title, content, index }) => (
+const ServicesCard = ({ icon, title, content, index }) => (
   <div
     className={`flex flex-row p-6 rounded-[20px] ${
-      index !== features.length - 1 ? "mb-6" : "mb-0"
+      index !== services.length - 1 ? "mb-6" : "mb-0"
     } feature-card`}
   >
     <div
@@ -36,30 +36,30 @@ const FeaturesCard = ({ icon, title, content, index }) => (
   </div>
 );
 
-const Business = () => {
+const Services = () => {
   return (
-    <section id="features" className={layout.section}>
+    <section id="services" className={layout.section}>
       <div className={layout.sectionInfo}>
         <h2 className={styles.heading2}>
-          You do the business, <br className="sm:block hidden" /> we'll handle
-          the money.
+          You do the business, <br className="sm:block hidden" /> we'll manage
+          the automation.
         </h2>
         <p className={`${styles.paragraph} max-w-[470px] font-poppins mt-5`}>
-          With the right credit card, you can improve your financial life by
-          building credit, earning rewards and saving money. But with hundreds
-          of credit cards on the market.
+          With the perfect AI automation solutions, your business can thrive by
+          optimizing operations increasing profits and simplifying processes.
+          But in a sea of options...
         </p>
 
         <Button styles="mt-10" />
       </div>
 
       <div className={`${layout.sectionImg} flex-col`}>
-        {features.map((feature, index) => (
-          <FeaturesCard key={feature.id} index={index} {...feature} />
+        {services.map((service, index) => (
+          <ServicesCard key={service.id} index={index} {...service} />
         ))}
       </div>
     </section>
   );
 };
 
-export default Business;
+export default Services;

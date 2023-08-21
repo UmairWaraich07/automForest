@@ -1,14 +1,11 @@
 import {
-  Billing,
   Business,
   CTA,
   CardDeal,
-  Clients,
+  ContactForm,
   Footer,
   Hero,
   Navbar,
-  Stats,
-  Testimonials,
 } from "@/components";
 import styles from "./style";
 const Home = () => {
@@ -28,13 +25,10 @@ const Home = () => {
 
       <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
-          <Stats />
-          <Business />
-          <Billing />
           <CardDeal />
-          <Testimonials />
-          <Clients />
+          <Business />
           <CTA />
+          <ContactForm />
           <Footer />
         </div>
       </div>

@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
 
-import { logo, menu, close } from "../public/assets";
+import { menu, close } from "../public/assets";
+import automForestLogo from "../public/assets/logo.png";
 import { navLinks } from "@/constants";
 import { useState } from "react";
 
@@ -10,14 +11,20 @@ const Navbar = () => {
 
   return (
     <nav className="w-full py-6 flex justify-between items-center navbar">
-      <Image
-        src={logo}
-        alt="logo"
-        width={124}
-        height={32}
-        className="object-contain"
-        priority
-      />
+      <div className="flex items-center">
+        <Image
+          src={automForestLogo}
+          alt="AutomForest AI"
+          width={42}
+          height={42}
+          className="object-contain"
+          priority
+        />
+        <h4 className="font-semibold text-lg text-white font-poppins tracking-wide">
+          Autom
+          <span className="text-[#33bbcf]">Forest</span> AI
+        </h4>
+      </div>
 
       <ul className="list-none sm:flex hidden justify-end items-center space-x-10 flex-1">
         {navLinks.map((link) => (

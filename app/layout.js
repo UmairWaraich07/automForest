@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "HooBank",
-  description: "The Next Generation Payment Method.",
+  title: "AutomForest AI",
+  description: "Future Proof Your Business with AI Automation.",
 };
 
 export default function RootLayout({ children }) {

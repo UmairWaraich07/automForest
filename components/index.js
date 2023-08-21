@@ -1,23 +1,9 @@
-import Billing from "./Billing";
-import Business from "./Business";
-import CardDeal from "./CardDeal";
-import Clients from "./Clients";
+import Business from "./Services";
+import CardDeal from "./About";
 import CTA from "./CTA";
 import Footer from "./Footer";
 import Hero from "./Hero";
 import Navbar from "./Navbar";
-import Stats from "./Stats";
-import Testimonials from "./Testimonials";
+import ContactForm from "./ContactForm";
 
-export {
-  Billing,
-  Business,
-  CardDeal,
-  Clients,
-  CTA,
-  Footer,
-  Hero,
-  Navbar,
-  Stats,
-  Testimonials,
-};
+export { Business, CardDeal, CTA, Footer, Hero, Navbar, ContactForm };
