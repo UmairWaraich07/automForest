@@ -45,7 +45,7 @@ const Hero = () => {
         <p
           className={`styles.paragraph max-w-[470px] text-white mt-5 sm:text-lg`}
         >
-          Our team of employs a methodology that leverages cutting-edge chatbots
+          Our team employs a methodology that leverages cutting-edge chatbots
           and AI tools to transform your operations, boost profits and
           streamline your journey to success.
         </p>
