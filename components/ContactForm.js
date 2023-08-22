@@ -2,7 +2,7 @@
 import Image from "next/image";
 import contactImg from "../public/assets/contact-img.svg";
 import styles, { layout } from "@/app/style";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 const ContactForm = () => {
   const firstNameRef = useRef(null);
@@ -11,16 +11,24 @@ const ContactForm = () => {
   const subjectRef = useRef(null);
   const messageRef = useRef(null);
 
+  const [loading, setLoading] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = {
       firstName: firstNameRef.current.value,
       lastName: lastNameRef.current.value,
-      email: lastNameRef.current.value,
+      email: emailRef.current.value,
       subject: subjectRef.current.value,
       message: messageRef.current.value,
     };
     console.log(formData);
+    setLoading(false);
+    firstNameRef.current.value = "";
+    lastNameRef.current.value = "";
+    emailRef.current.value = "";
+    subjectRef.current.value = "";
+    messageRef.current.value = "";
   };
 
   return (
@@ -46,7 +54,8 @@ const ContactForm = () => {
       <div className={`${layout.sectionInfo} contact my-6 md:my-0`}>
         <h2 className={`${styles.heading2} `}>Let's get in touch</h2>
         <form
-          onSubmit={handleSubmit}
+          action="https://formspree.io/f/myyqwwdn"
+          method="POST"
           className="w-full flex flex-col justify-start items-start
            text-white font-poppins space-y-2 mt-5"
         >
@@ -92,8 +101,9 @@ const ContactForm = () => {
             type="submit"
             className={`py-4 px-10 bg-blue-gradient font-poppins font-medium
   text-[18px] text-primary outline-none ${styles} rounded-[10px] mt-10`}
+            disabled={loading}
           >
-            Send
+            {loading ? "Sending..." : "Send"}
           </button>
         </form>
       </div>

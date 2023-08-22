@@ -42,11 +42,11 @@ const Footer = () => (
         </div>
         <div className="flex flex-col ml-3 font-poppins ">
           <a
-            href="mailto:umair@reachumair.com"
+            href="mailto:zubair@automforestai.com"
             className="font-normal
     text-dimWhite text-[18px] leading-[24px] hover:text-white"
           >
-            umair@reachumair.com
+            zubair@automforestai.com
           </a>
         </div>
       </div>
