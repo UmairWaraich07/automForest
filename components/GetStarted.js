@@ -9,8 +9,9 @@ const GetStarted = () => {
     >
       <div className="bg-primary w-[100%] h-[100%] rounded-full font-poppins">
         <a
-          href="#contact"
+          href="https://calendly.com/d/2yk-84x-8mq/chatbot-development-consultation?month=2023-09"
           className={`${styles.flexCenter} flex-col w-full h-full`}
+          target="_blank"
         >
           <p className={`${styles.flexCenter} space-x-2 text-gradient`}>
             <span className="font-medium  text-[18px] leading-[23px]">

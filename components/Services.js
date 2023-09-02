@@ -50,7 +50,7 @@ const Services = () => {
           But in a sea of options...
         </p>
 
-        <Button styles="mt-10" />
+        <Button styles="mt-10" label="Get Started" link="#contact" />
       </div>
 
       <div className={`${layout.sectionImg} flex-col`}>

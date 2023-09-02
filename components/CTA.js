@@ -13,7 +13,10 @@ bg-black-gradient-2 rounded-[20px] box-shadow`}
       </p>
     </div>
     <div className={`${styles.flexCenter}  sm:ml-10 ml-0 sm:mt-0 mt-10`}>
-      <Button />
+      <Button
+        label="Schedule a Call"
+        link="https://calendly.com/d/2yk-84x-8mq/chatbot-development-consultation?month=2023-09"
+      />
     </div>
   </section>
 );
